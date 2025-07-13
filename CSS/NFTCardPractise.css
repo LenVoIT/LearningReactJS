@@ -1,0 +1,84 @@
+body {
+  background-color: #0d192b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+}
+.nftCard {
+  background-color: #14253d;
+  padding: 1rem;
+  border-radius: 20px;
+  color: white;
+  max-width: 300px;
+}
+.imgContainer {
+  position: relative;
+  width: 100%;
+  transition: transform 1s ease;
+}
+.imgContainer img {
+  border-radius: 20px;
+  width: 100%;
+  overflow: hidden;
+  transition: transform 1s ease;
+}
+.imgContainer:hover {
+  cursor: pointer;
+}
+.imgContainer:hover img {
+  transform: scale(1.02);
+}
+.layer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  background: linear-gradient(
+    300deg,
+    rgba(0, 255, 255, 0.5)
+  );
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.eyeIcon{
+    font-size: 10em;
+}
+.imgContainer:hover .layer {
+  opacity: 1;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.price {
+  color: aqua;
+}
+.description {
+  color: #868686
+}
+.time {
+  color: #8bacda;
+}
+
+.creator {
+  display: flex;
+  border-top: 1px solid #2f415b;
+  padding-top: 1rem;
+  align-items: center;
+}
+.avatar {
+  margin-right: 0.8rem;
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.creatorName {
+  color: #fff !important;
+}
