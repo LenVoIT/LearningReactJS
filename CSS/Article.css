@@ -1,0 +1,121 @@
+body {
+  background-color: #c5daef;
+  background-image: url("https://images.unsplash.com/photo-1752353739067-357d9ff65d4f?q=80&w=2084&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  display: flex;
+  background-size: cover; /* Ảnh phủ kín toàn bộ màn hình */
+  background-position: center; /* Căn giữa ảnh */
+  background-repeat: no-repeat; /* Không lặp lại */
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 100vh;
+}
+.articleContainer {
+  background-color: #e8f1ff; /* màu nền xanh nhạt */
+  padding: 150px 300px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+.article {
+  display: flex;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: white;
+  border-radius: 12px;
+}
+
+.imgContainer img {
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+}
+.textContainer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.textContainer h3 {
+  font-size: 1.1em;
+}
+.authorName,
+.date {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+.textContainer p {
+  font-size: 0.8em;
+  color: #475569;
+}
+.author {
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 1.2rem;
+}
+.authorName {
+  font-weight: 800;
+}
+.shareContainer {
+  margin-left: auto;
+  position: relative;
+}
+.shareBtn {
+  margin-right: 1rem;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  padding: 5px;
+  cursor: pointer;
+}
+.shareBtn img {
+  width: 16px;
+  height: 16px;
+}
+.share-popup {
+  position: absolute;
+  bottom: 30px;
+  right: 0.3rem;
+  background: #48556a;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.share-popup::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 15px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #48556a transparent transparent transparent;
+}
+
+.share-popup span {
+  letter-spacing: 2px;
+  font-size: 0.7em;
+  color: #cfd8e2;
+}
+
+.share-popup a img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+
+.share-popup.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
