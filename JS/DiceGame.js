@@ -12,11 +12,13 @@ const rollDice = document
     console.log(`Player 1 rolled: ${rollDice1}`);
     console.log(`Player 2 rolled: ${rollDice2}`);
 
+    const title = document.getElementById("result");
+    console.log(title);
     if (rollDice1 > rollDice2) {
-      console.log("Dice 1 > Dice 2");
-    } else if ((rollDice1 == rollDice2)) {
-      console.log("Dice 1 = Dice 2");
+      title.textContent = "Player 1 win";
+    } else if (rollDice1 == rollDice2) {
+      title.textContent = "Draw";
     } else {
-      console.log("Dice 1 < Dice 2");
+      title.textContent = "Player 2 win";
     }
   });
